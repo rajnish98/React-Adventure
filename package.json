@@ -2,8 +2,9 @@
   "name": "react-adventure",
   "version": "1.0.0",
   "description": "live course",
-  "main": "app.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -13,6 +14,8 @@
   "author": "Rajnish Pandey",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.10.3",
     "process": "^0.11.10"
   },
