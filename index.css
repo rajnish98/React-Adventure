@@ -4,8 +4,20 @@
   box-sizing: border-box;
 }
 
-#container {
-  background-color: red;
+.header{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.Nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.Nav-items > ul > li {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 20px;
 }

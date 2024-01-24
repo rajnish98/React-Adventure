@@ -3,10 +3,11 @@
 
   // React.createElement => Object => HTML(DOM)
   // jsx = React.createElement => Object => HTML(DOM)
-  const head = 
-  (<h1 id="title" key="h2"
+  const Title = () =>(
+  <h1 id="title" key="h2"
   >Food Villa
-  </h1>);
+  </h1>
+  );
   
 
   // const container = React.createElement("div", {
@@ -30,14 +31,31 @@
   
   const HeaderComponent = () => {
     return(
-    <div>
-      {head}
-      {/* {head()} */}
-      //* <head/> //componenet composition */
-      <h1>Namaste React functional componenet</h1>
-      <h2>This is a h2 tage</h2>
+    <div className= "header">
+      {/* {head} */}
+      <Title/>
+     {/* <head/> //componenet composition  */}
+     <div className="Nav-items">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Cart</li>  
+      </ul>
+     </div>
     </div>
-  )};
+  );
+};
+
+
+
+  const AppLayout = () => {
+    return(
+      {
+         
+      }
+    )
+  }
   const root = ReactDOM.createRoot(document.getElementById("root"));
 
   // passing a react element inside the root
