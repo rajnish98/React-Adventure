@@ -3,7 +3,10 @@
 
   // React.createElement => Object => HTML(DOM)
   // jsx = React.createElement => Object => HTML(DOM)
-  const head = (<h1 id="title" key="h2">namste friend</h1>);
+  const head = 
+  (<h1 id="title" key="h2"
+  >Food Villa
+  </h1>);
   
 
   // const container = React.createElement("div", {
@@ -28,6 +31,9 @@
   const HeaderComponent = () => {
     return(
     <div>
+      {head}
+      {/* {head()} */}
+      //* <head/> //componenet composition */
       <h1>Namaste React functional componenet</h1>
       <h2>This is a h2 tage</h2>
     </div>
