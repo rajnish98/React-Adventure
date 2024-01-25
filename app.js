@@ -544,15 +544,12 @@ const RestrauntCard = ({name, cuisines, cloudinaryImageId, avgRating}) => {
 }
 const Body = () => {
   return(<div className="restaurant-list">
-    <RestrauntCard restaurant={RestrauntList[0]}/>
-    <RestrauntCard restaurant={RestrauntList[1]}/>
-    <RestrauntCard restaurant={RestrauntList[2]}/>
-    <RestrauntCard restaurant={RestrauntList[3]}/>
-    <RestrauntCard restaurant={RestrauntList[4]}/>
-    <RestrauntCard restaurant={RestrauntList[5]}/>
+    {RestrauntList.map((restaurant) => {
+      return <RestrauntCard {...restaurant.data} />
+    })}
 
   </div>
-  )
+  );
 };
 
 const Footer = () => {
