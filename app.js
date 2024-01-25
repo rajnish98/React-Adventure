@@ -545,7 +545,7 @@ const RestrauntCard = ({name, cuisines, cloudinaryImageId, avgRating}) => {
 const Body = () => {
   return(<div className="restaurant-list">
     {RestrauntList.map((restaurant) => {
-      return <RestrauntCard {...restaurant.data} />
+      return <RestrauntCard {...restaurant.data} key={restaurant.data.id} />
     })}
 
   </div>
