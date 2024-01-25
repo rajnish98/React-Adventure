@@ -1,12 +1,12 @@
   import React from "react";
-  import ReactDOM from "react-dom/client";
+  import ReactDOM, {createRoot} from "react-dom/client";
 
   // React.createElement => Object => HTML(DOM)
   // jsx = React.createElement => Object => HTML(DOM)
   const Title = () =>(
-  <h1 id="title" key="h2"
-  >Food Villa
-  </h1>
+    <a href="/">
+  <img className="logo " alt="logo" src="https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg" />
+  </a>
   );
   
 
@@ -29,7 +29,7 @@
   // - FUNCTION - NEW
   // - CLASS BASED COMPONENT - OLD WAY OF WRITING.
   
-  const HeaderComponent = () => {
+  const Header = () => {
     return(
     <div className= "header">
       {/* {head} */}
@@ -47,17 +47,30 @@
   );
 };
 
+const Body = () => {
+  return (
+    <h4>Body</h4>
+  )
+}
 
+const Footer = () => {
+  return (
+    <h4>Footer</h4>
+  )
+}
 
   const AppLayout = () => {
     return(
-      {
-         
-      }
-    )
-  }
+  
+  <React.Fragment>
+        <Header/>
+        <Body/>
+        <Footer/>
+        </React.Fragment>
+    );
+  };
   const root = ReactDOM.createRoot(document.getElementById("root"));
 
   // passing a react element inside the root
   // root.render(head); // render is modify of dom
-  root.render(<HeaderComponent/>);
+  root.render(<AppLayout/>);
